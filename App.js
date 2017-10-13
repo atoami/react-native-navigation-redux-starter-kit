@@ -17,7 +17,7 @@ export default class App extends PureComponent {
       <Provider store={store}>
         <RouterWithRedux showNavigationBar={true}>
           <Scene key="root">
-            <Scene key="main" title="Main" component={LoginScene} initial={true} hideNavBar />
+            <Scene key="login" component={LoginScene} initial={true} hideNavBar />
             <Scene key="dashboard" title="Dashboard" component={DashboardScene} />
           </Scene>
         </RouterWithRedux>
