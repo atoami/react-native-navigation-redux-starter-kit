@@ -1,1 +1,0 @@
-../../../../FirebaseRemoteConfig/Frameworks/FirebaseRemoteConfig.framework/Headers/FirebaseRemoteConfig.h
