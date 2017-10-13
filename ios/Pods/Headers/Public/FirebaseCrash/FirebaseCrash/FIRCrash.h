@@ -1,1 +1,0 @@
-../../../../FirebaseCrash/Frameworks/FirebaseCrash.framework/Headers/FIRCrash.h

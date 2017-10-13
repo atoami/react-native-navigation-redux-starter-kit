@@ -1,1 +1,0 @@
-../../../../../../../gRPC-Core/src/core/tsi/gts_transport_security.h

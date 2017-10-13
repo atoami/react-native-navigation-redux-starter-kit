@@ -1,1 +1,0 @@
-../../../../FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h

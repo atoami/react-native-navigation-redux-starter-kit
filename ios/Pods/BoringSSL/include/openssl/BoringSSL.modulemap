@@ -1,5 +1,0 @@
-  framework module openssl {
-    umbrella header "umbrella.h"
-    export *
-    module * { export * }
-  }
