@@ -1,0 +1,1 @@
+../../../../FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSetOptions.h

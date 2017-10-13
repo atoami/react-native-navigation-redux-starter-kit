@@ -1,0 +1,9 @@
+CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR/gRPC-RxLibrary
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/gRPC-RxLibrary" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BoringSSL" "${PODS_ROOT}/Headers/Public/Firebase" "${PODS_ROOT}/Headers/Public/FirebaseAnalytics" "${PODS_ROOT}/Headers/Public/FirebaseAuth" "${PODS_ROOT}/Headers/Public/FirebaseCore" "${PODS_ROOT}/Headers/Public/FirebaseCrash" "${PODS_ROOT}/Headers/Public/FirebaseDatabase" "${PODS_ROOT}/Headers/Public/FirebaseDynamicLinks" "${PODS_ROOT}/Headers/Public/FirebaseFirestore" "${PODS_ROOT}/Headers/Public/FirebaseInstanceID" "${PODS_ROOT}/Headers/Public/FirebaseMessaging" "${PODS_ROOT}/Headers/Public/FirebasePerformance" "${PODS_ROOT}/Headers/Public/FirebaseRemoteConfig" "${PODS_ROOT}/Headers/Public/FirebaseStorage" "${PODS_ROOT}/Headers/Public/GTMSessionFetcher" "${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK" "${PODS_ROOT}/Headers/Public/GoogleToolboxForMac" "${PODS_ROOT}/Headers/Public/Protobuf" "${PODS_ROOT}/Headers/Public/gRPC" "${PODS_ROOT}/Headers/Public/gRPC-Core" "${PODS_ROOT}/Headers/Public/gRPC-ProtoRPC" "${PODS_ROOT}/Headers/Public/gRPC-RxLibrary" "${PODS_ROOT}/Headers/Public/leveldb-library" "${PODS_ROOT}/Headers/Public/nanopb"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}
+PODS_TARGET_SRCROOT = ${PODS_ROOT}/gRPC-RxLibrary
+PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
+SKIP_INSTALL = YES
