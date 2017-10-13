@@ -2,5 +2,5 @@
  * @providesModule AppScenes
  */
 
-export { MainScene } from './MainScene';
+export { LoginScene } from './LoginScene';
 export { DashboardScene } from './DashboardScene';

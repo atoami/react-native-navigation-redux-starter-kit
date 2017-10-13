@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   }
 });
 
-class MainScene extends PureComponent {
+class LoginScene extends PureComponent {
 
   render() {
     return (
@@ -30,4 +30,4 @@ class MainScene extends PureComponent {
   }
 }
 
-export default (MainScene);
+export default (LoginScene);
