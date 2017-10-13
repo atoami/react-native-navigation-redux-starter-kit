@@ -9,6 +9,8 @@
 
 #import "AppDelegate.h"
 
+#import <Firebase.h>
+
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
@@ -18,6 +20,8 @@
 {
   NSURL *jsCodeLocation;
 
+  [FIRApp configure];
+  
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation

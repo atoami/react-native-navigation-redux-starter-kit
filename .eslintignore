@@ -1,0 +1,3 @@
+./**/tests/*.js
+*.test.js
+./**/__tests__/**/*.js
