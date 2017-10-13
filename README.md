@@ -24,6 +24,7 @@ Clone the repo and install packages.
 $ git clone https://github.com/bdavid68/react-native-redux-firebase ReactNativeBoilerplate
 $ cd ReactNativeBoilerplate
 $ npm install
+$ cd ios && pod install
 ```
 
 Run Android Project.
