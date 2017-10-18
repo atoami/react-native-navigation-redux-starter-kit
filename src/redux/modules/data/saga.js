@@ -17,12 +17,12 @@ import {
 
 export function* asyncFetchData({ payload }) {
 
-  const { url } = payload;
+  const { url, method, params } = payload;
 
   try {
-    const response = yield call(App_Service, { url, method: 'GET', params: null });
+    const response = yield call(App_Service, { url, method, params });
 
-    if (response) {
+    if (response.result === 'ok') {
       yield put(fetchDataActionCreators.fetchDataSuccess(response.data));
     }
   } catch (e) {
