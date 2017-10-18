@@ -1,6 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import {
   StyleSheet,
   View,
@@ -8,6 +9,8 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import { connectData } from 'AppRedux';
+import { apiConfig } from 'AppConfig';
 
 const styles = StyleSheet.create({
   flex: {
@@ -18,6 +21,13 @@ const styles = StyleSheet.create({
 });
 
 class LoginScene extends PureComponent {
+
+  componentDidMount() {
+    const { fetchData } = this.props;
+
+    // call redux action
+    fetchData({ url: apiConfig.api_endpoint, method: 'GET', params: null });
+  }
 
   render() {
     return (
@@ -30,4 +40,8 @@ class LoginScene extends PureComponent {
   }
 }
 
-export default (LoginScene);
+LoginScene.propTypes = {
+  fetchData: PropTypes.func.isRequired
+};
+
+export default connectData()(LoginScene);

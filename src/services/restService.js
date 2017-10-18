@@ -19,6 +19,16 @@ export default async function App_Service({ url, method, params }) {
 
   return fetch(url, reqBody)
     .then(response => response.json())
-    .then(data => data)
-    .catch(error => error);
+    .then((data) => {
+      return {
+        result: 'ok',
+        data
+      };
+    })
+    .catch(() => {
+      return {
+        result: 'error',
+        message: 'Please check your internet connection!'
+      };
+    });
 }
