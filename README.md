@@ -46,3 +46,7 @@ $ npm run clean
 ## Issues
 
 Do you have any concern to run this project?&nbsp;&nbsp;Please feel free to contact me!
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details
