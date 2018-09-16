@@ -22,7 +22,7 @@ Before start, make sure you installed:
 
 Clone the repo and install packages.
 ```shell
-$ git clone https://github.com/bdavid68/react-native-redux-firebase ReactNativeBoilerplate
+$ git clone https://github.com/bbdroid/react-native-redux-firebase ReactNativeBoilerplate
 $ cd ReactNativeBoilerplate
 $ npm install
 $ cd ios && pod install
