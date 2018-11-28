@@ -2,4 +2,4 @@
  * @providesModule AppServices
 **/
 
-export App_Service from './restService';
+export { default as App_Service } from './restService';

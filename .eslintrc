@@ -33,21 +33,33 @@
   "rules": {
     "comma-dangle": 0,
     "indent": [2, 2, {"SwitchCase": 1}],
-    "no-console": 1,
+    "no-console": 0,
     "camelcase": 0,
     "react-native/no-unused-styles": 2,
     "no-return-assign": 0,
     "react/jsx-boolean-value": 0,
     "react/sort-comp": 0,
-    "react/prop-types":1,
     "arrow-body-style": 0,
     "no-nested-ternary": 0,
     "react/react-in-jsx-scope": 0,
-    "react/jsx-filename-extension": 0,
-    "padded-blocks": 0,
-    "react/prefer-stateless-function": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/extensions": 0,
     "import/no-unresolved": 0,
-    "import/no-extraneous-dependencies": 0
+    "react/jsx-curly-brace-presence": 0,
+    "react/jsx-wrap-multilines": "off",
+    "react/destructuring-assignment": "off",
+    "max-len": ["error", { "code": 100 }],
+    "import/prefer-default-export": 0,
+    "global-require": "off",
+    "prefer-promise-reject-errors": "off",
+    "padded-blocks": "off",
+    "react/no-typos": "off",
+    "no-underscore-dangle": "warn",
+    "react/prop-types": ["error", { "ignore": ["componentId"] }]
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
   }
 }
