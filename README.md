@@ -1,6 +1,6 @@
-# React Native Starter Kit with Redux, Saga, Firebase
+# React Native Navigation Starter Kit with Redux, Saga, Eslint and Babel.
 
-A starter boilerplate for a mobile app using React Native and Redux.
+A starter boilerplate for a mobile app using React Native Navigation and Redux & Saga.
 
 ## Requirements
 Before start, make sure you installed:
@@ -10,10 +10,9 @@ Before start, make sure you installed:
 
 ## Stack
 - [React Native](https://facebook.github.io/react-native/): Development Environment
-- [React Native Router Flux](https://github.com/aksonov/react-native-router-flux): JS based navigator for React Native
+- [React Native Navigation](https://github.com/wix/react-native-navigation): Native based navigator for React Native
 - [Redux](http://redux.js.org/): A predictable state container for JavaScript apps
 - [Redux-Saga](https://redux-saga.js.org/docs/api/): An alternative side effect model for Redux apps
-- [Firebase](https://firebase.google.com/): Realtime Database
 - [ESLint](https://eslint.org/): Pluggable linting utility for JavaScript
 - [Babel](http://babeljs.io/): The compiler for writing next generation JavaScript
 - [Flow](http://flowtype.org/): A Static Type Checker for JavaScript
@@ -24,8 +23,7 @@ Clone the repo and install packages.
 ```shell
 $ git clone https://github.com/bbdroid/react-native-redux-firebase ReactNativeBoilerplate
 $ cd ReactNativeBoilerplate
-$ npm install
-$ cd ios && pod install
+$ yarn
 ```
 
 Run Android Project.
@@ -36,11 +34,6 @@ $ react-native run-android
 Run iOS Project.
 ```shell
 $ react-native run-ios
-```
-
-Clean cache
-```shell
-$ npm run clean
 ```
 
 ## Issues
