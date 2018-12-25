@@ -8,9 +8,9 @@ import {
   Text,
   TouchableOpacity
 } from 'react-native';
-import { Actions } from 'react-native-router-flux';
 import { connectData } from 'AppRedux';
 import { apiConfig } from 'AppConfig';
+import { pushDashboard } from 'AppNavigator';
 
 const styles = StyleSheet.create({
   flex: {
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   }
 });
 
-class LoginScene extends PureComponent {
+class LoginScreen extends PureComponent {
 
   componentDidMount() {
     const { fetchData } = this.props;
@@ -32,7 +32,7 @@ class LoginScene extends PureComponent {
   render() {
     return (
       <View style={styles.flex}>
-        <TouchableOpacity onPress={() => Actions.dashboard()}>
+        <TouchableOpacity onPress={() => pushDashboard()}>
           <Text>Click here!</Text>
         </TouchableOpacity>
       </View>
@@ -40,8 +40,8 @@ class LoginScene extends PureComponent {
   }
 }
 
-LoginScene.propTypes = {
+LoginScreen.propTypes = {
   fetchData: PropTypes.func.isRequired
 };
 
-export default connectData()(LoginScene);
+export default connectData()(LoginScreen);

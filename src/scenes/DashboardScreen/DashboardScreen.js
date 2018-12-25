@@ -7,7 +7,7 @@ import {
   Text,
   TouchableOpacity
 } from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import { pushAuthentication } from 'AppNavigator';
 
 const styles = StyleSheet.create({
   flex: {
@@ -17,17 +17,23 @@ const styles = StyleSheet.create({
   }
 });
 
-class MainScene extends PureComponent {
+class DashboardScreen extends PureComponent {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
 
   render() {
     return (
       <View style={styles.flex}>
-        <TouchableOpacity onPress={() => Actions.pop()}>
-          <Text>Click here to back!</Text>
+        <TouchableOpacity onPress={() => pushAuthentication()}>
+          <Text>Click here to back to login page!</Text>
         </TouchableOpacity>
       </View>
     );
   }
 }
 
-export default (MainScene);
+export default DashboardScreen;

@@ -1,3 +1,3 @@
 // @flow
 
-export Provider from './provider';
+export { default as Provider } from './provider';

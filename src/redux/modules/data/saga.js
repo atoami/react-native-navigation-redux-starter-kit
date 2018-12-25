@@ -32,12 +32,12 @@ export function* asyncFetchData({ payload }) {
 
 export function* watchFetchData() {
   while (true) {
-    const action: Action = yield take(FETCH_DATA);
+    const action = yield take(FETCH_DATA);
     yield* asyncFetchData(action);
   }
 }
 
-export default function* (): Iterable {
+export default function* () {
   yield all([
     fork(watchFetchData)
   ]);

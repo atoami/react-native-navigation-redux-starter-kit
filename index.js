@@ -1,4 +1,4 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
+import { Navigation } from 'react-native-navigation';
+import { pushAuthentication } from 'AppNavigator';
 
-AppRegistry.registerComponent('ReactNativeStarterKit', () => App);
+Navigation.events().registerAppLaunchedListener(() => pushAuthentication());
