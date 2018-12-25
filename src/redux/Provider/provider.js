@@ -14,19 +14,14 @@ class AppStoreProvider extends PureComponent {
     };
   }
 
-  static contextTypes = {
-    emitter: PropTypes.shape({}),
-  };
-
   static childContextTypes = {
     store: PropTypes.shape({})
   };
 
   render() {
-    const { emitter } = this.context;
     const { children } = this.props;
 
-    store = store || createStore({ emitter });
+    store = store || createStore();
 
     return (
       <Provider store={store}>

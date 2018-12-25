@@ -1,16 +1,9 @@
 // @flow
 
 import { Navigation } from 'react-native-navigation';
-// import { NativeModules } from 'react-native';
 
 import { LOGIN_SCREEN, DASHBOARD_SCREEN } from './Screens';
 import registerScreens from './registerScreens';
-
-// const { UIManager } = NativeModules;
-
-// if (UIManager.setLayoutAnimationEnabledExperimental) {
-//   UIManager.setLayoutAnimationEnabledExperimental(true);
-// }
 
 // Register all screens on launch
 registerScreens();
