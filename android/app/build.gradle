@@ -94,18 +94,23 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.david.react.starterkit"
-        minSdkVersion 16
-        targetSdkVersion 22
+        applicationId "com.fantompay"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative57"
         versionCode 1
         versionName "1.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     splits {
         abi {
@@ -136,29 +141,20 @@ android {
     }
 }
 
-dependencies {
-    compile(project(':react-native-firebase')) {
-        transitive = false
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support' && requested.name != 'multidex') {
+            details.useVersion "${rootProject.ext.supportLibVersion}"
+        }
     }
+}
 
-    // RNFirebase required dependencies
-    compile "com.google.firebase:firebase-core:11.4.2"
-    compile "com.google.android.gms:play-services-base:11.4.2"
-
-    // RNFirebase optional dependencies
-    compile "com.google.firebase:firebase-ads:11.4.2"
-    compile "com.google.firebase:firebase-auth:11.4.2"
-    compile "com.google.firebase:firebase-config:11.4.2"
-    compile "com.google.firebase:firebase-crash:11.4.2"
-    compile "com.google.firebase:firebase-database:11.4.2"
-    compile "com.google.firebase:firebase-firestore:11.4.2"
-    compile "com.google.firebase:firebase-messaging:11.4.2"
-    compile "com.google.firebase:firebase-perf:11.4.2"
-    compile "com.google.firebase:firebase-storage:11.4.2"
-
-    compile fileTree(dir: "libs", include: ["*.jar"])
-    compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:+"  // From node_modules
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+    implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation project(':react-native-navigation')
 }
 
 // Run this once to be able to run the application with BUCK
@@ -168,4 +164,17 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into 'libs'
 }
 
-apply plugin: 'com.google.gms.google-services'
+subprojects { subproject ->
+    afterEvaluate {
+        if ((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
+            android {
+                variantFilter { variant ->
+                    def names = variant.flavors*.name
+                    if (names.contains("reactNative51") || names.contains("reactNative55")) {
+                        setIgnore(true)
+                    }
+                }
+            }
+        }
+    }
+}
