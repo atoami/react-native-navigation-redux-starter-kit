@@ -1,4 +1,4 @@
-# React Native Navigation Starter Kit with Redux, Saga, Eslint and Babel.
+# React Native Navigation(v2) Starter Kit with Redux, Saga, Eslint and Babel.
 
 A starter boilerplate for a mobile app using React Native Navigation and Redux & Saga.
 
@@ -10,7 +10,7 @@ Before start, make sure you installed:
 
 ## Stack
 - [React Native](https://facebook.github.io/react-native/): Development Environment
-- [React Native Navigation](https://github.com/wix/react-native-navigation): Native based navigator for React Native
+- [React Native Navigation(v2)](https://github.com/wix/react-native-navigation): Native based navigator for React Native
 - [Redux](http://redux.js.org/): A predictable state container for JavaScript apps
 - [Redux-Saga](https://redux-saga.js.org/docs/api/): An alternative side effect model for Redux apps
 - [ESLint](https://eslint.org/): Pluggable linting utility for JavaScript
