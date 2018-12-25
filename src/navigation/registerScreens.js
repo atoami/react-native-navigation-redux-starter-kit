@@ -3,10 +3,10 @@
 import React from 'react';
 import { Navigation } from 'react-native-navigation';
 
-import { LoginScreen, DashboardScreen } from 'AppScreens';
+import { WelcomeScreen, LoginScreen, DashboardScreen } from 'AppScreens';
 import { Provider } from 'AppRedux';
 
-import { LOGIN_SCREEN, DASHBOARD_SCREEN } from './Screens';
+import { WELCOME_SCREEN, LOGIN_SCREEN, DASHBOARD_SCREEN } from './Screens';
 
 function WrappedComponent(Component) {
   return function inject(props) {
@@ -23,6 +23,7 @@ function WrappedComponent(Component) {
 }
 
 export default function () {
+  Navigation.registerComponent(WELCOME_SCREEN, () => WrappedComponent(WelcomeScreen));
   Navigation.registerComponent(LOGIN_SCREEN, () => WrappedComponent(LoginScreen));
   Navigation.registerComponent(DASHBOARD_SCREEN, () => WrappedComponent(DashboardScreen));
   console.info('All screens have been registered...');

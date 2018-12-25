@@ -1,2 +1,2 @@
 export * from './Screens';
-export { pushAuthentication, pushDashboard } from './Navigation';
+export { pushTutorialScreen, pushDashboard } from './Navigation';

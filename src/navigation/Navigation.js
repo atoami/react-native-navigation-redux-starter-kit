@@ -2,29 +2,29 @@
 
 import { Navigation } from 'react-native-navigation';
 
-import { LOGIN_SCREEN, DASHBOARD_SCREEN } from './Screens';
+import { WELCOME_SCREEN, DASHBOARD_SCREEN } from './Screens';
 import registerScreens from './registerScreens';
 
 // Register all screens on launch
 registerScreens();
 
-export function pushAuthentication() {
+export function pushTutorialScreen() {
   Navigation.setDefaultOptions({
     topBar: {
       background: {
-        color: 'white'
+        color: 'black'
       },
       title: {
-        color: 'black',
+        color: 'white',
       },
       backButton: {
         title: '', // Remove previous screen name from back button
         color: 'white'
       },
-      buttonColor: 'black',
+      buttonColor: 'white',
     },
     statusBar: {
-      style: 'dark'
+      style: 'light'
     },
     layout: {
       orientation: ['portrait']
@@ -34,7 +34,7 @@ export function pushAuthentication() {
   Navigation.setRoot({
     root: {
       component: {
-        name: LOGIN_SCREEN
+        name: WELCOME_SCREEN
       }
     }
   });

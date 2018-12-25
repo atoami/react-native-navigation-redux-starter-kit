@@ -7,7 +7,7 @@ import {
   Text,
   TouchableOpacity
 } from 'react-native';
-import { pushAuthentication } from 'AppNavigator';
+import { pushTutorialScreen } from 'AppNavigator';
 
 const styles = StyleSheet.create({
   flex: {
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   }
 });
 
-class TutorialScreen extends PureComponent {
+class DashboardScreen extends PureComponent {
 
   constructor(props) {
     super(props);
@@ -28,7 +28,7 @@ class TutorialScreen extends PureComponent {
   render() {
     return (
       <View style={styles.flex}>
-        <TouchableOpacity onPress={() => pushAuthentication()}>
+        <TouchableOpacity onPress={() => pushTutorialScreen()}>
           <Text>Click here to back to login page!</Text>
         </TouchableOpacity>
       </View>
@@ -36,4 +36,4 @@ class TutorialScreen extends PureComponent {
   }
 }
 
-export default TutorialScreen;
+export default DashboardScreen;
