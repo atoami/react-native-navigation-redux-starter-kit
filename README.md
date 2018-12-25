@@ -1,6 +1,9 @@
-# React Native Navigation(v2) Starter Kit with Redux, Saga, Eslint and Babel.
+<h1 align="center">
+  <img src="logo.png"/><br>
+  React Native + React Native Navigation
+</h1>
 
-A starter boilerplate for a mobile app using React Native Navigation and Redux & Saga.
+A starter boilerplate for a mobile app using React Native & React Native Navigation(v2) and Redux-Saga. This boilerplate also provides a cool redux-saga structure to bootstrap your react-native app development.
 
 ## Requirements
 Before start, make sure you installed:
@@ -15,7 +18,8 @@ Before start, make sure you installed:
 - [Redux-Saga](https://redux-saga.js.org/docs/api/): An alternative side effect model for Redux apps
 - [ESLint](https://eslint.org/): Pluggable linting utility for JavaScript
 - [Babel](http://babeljs.io/): The compiler for writing next generation JavaScript
-- [Flow](http://flowtype.org/): A Static Type Checker for JavaScript
+- [React Native Elements](https://react-native-training.github.io/react-native-elements/): Cross Platform React Native UI Toolkit
+- [React Native Vector Icons](https://oblador.github.io/react-native-vector-icons/): Customizable Icons for React Native
 
 ## How to run?
 
@@ -42,4 +46,4 @@ Do you have any concern to run this project?&nbsp;&nbsp;Please feel free to cont
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details
+This project is licensed under the MIT License
