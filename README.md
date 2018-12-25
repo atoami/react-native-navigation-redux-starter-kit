@@ -1,6 +1,6 @@
 # React Native Navigation Starter Kit with Redux, Saga, Eslint and Babel.
 
-A starter boilerplate for a mobile app using React Native Navigation and Redux.
+A starter boilerplate for a mobile app using React Native Navigation and Redux & Saga.
 
 ## Requirements
 Before start, make sure you installed:
