@@ -25,7 +25,7 @@ Before start, make sure you installed:
 
 Clone the repo and install packages.
 ```shell
-$ git clone https://github.com/bbdroid/react-native-redux-firebase ReactNativeBoilerplate
+$ git clone https://github.com/wagng/react-native-navigation-redux-starter-kit ReactNativeBoilerplate
 $ cd ReactNativeBoilerplate
 $ yarn
 ```
