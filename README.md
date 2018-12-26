@@ -18,6 +18,7 @@ Before start, make sure you installed:
 - [Redux-Saga](https://redux-saga.js.org/docs/api/): An alternative side effect model for Redux apps
 - [ESLint](https://eslint.org/): Pluggable linting utility for JavaScript
 - [Babel](http://babeljs.io/): The compiler for writing next generation JavaScript
+- [Jest](https://jestjs.io/): Delightful JavaScript Testing
 - [React Native Elements](https://react-native-training.github.io/react-native-elements/): Cross Platform React Native UI Toolkit
 - [React Native Vector Icons](https://oblador.github.io/react-native-vector-icons/): Customizable Icons for React Native
 
