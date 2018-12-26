@@ -7,6 +7,4 @@ target 'ReactNativeStarterKit' do
 
   # Pods for ReactNativeStarterKit
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-
 end
