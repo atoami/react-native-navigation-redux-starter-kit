@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:boron
+    working_directory: ~/react-native-navigation-starter-kit
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
