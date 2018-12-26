@@ -3,7 +3,7 @@
   React Native + React Native Navigation
 </h1>
 
-A starter boilerplate for a mobile app using React Native & React Native Navigation(v2) and Redux-Saga. This boilerplate also provides a cool redux-saga structure to bootstrap your react-native app development.
+A starter boilerplate for a mobile app using React Native and React Native Navigation(v2). This boilerplate also provides a cool redux-saga structure to bootstrap your react-native app development.
 
 ## Requirements
 Before start, make sure you installed:
@@ -25,7 +25,7 @@ Before start, make sure you installed:
 
 Clone the repo and install packages.
 ```shell
-$ git clone https://github.com/bbdroid/react-native-redux-firebase ReactNativeBoilerplate
+$ git clone https://github.com/wagng/react-native-navigation-redux-starter-kit ReactNativeBoilerplate
 $ cd ReactNativeBoilerplate
 $ yarn
 ```
