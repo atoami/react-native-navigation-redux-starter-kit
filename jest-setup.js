@@ -1,5 +1,11 @@
 import './__mocks__';
 
+jest
+  .mock('Button', () => {
+    const RealComponent = require.requireActual('react-native-elements').Button;
+    return RealComponent;
+  });
+
 const emptyFn = () => {};
 const AnimatedValue = function() {
   this.setValue = emptyFn;
