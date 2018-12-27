@@ -39,7 +39,7 @@ $ react-native run-android
 Run iOS Project.
 ```shell
 $ cd ios && pod install
-$ react-native run-ios
+$ cd .. && react-native run-ios
 ```
 
 ## Issues
