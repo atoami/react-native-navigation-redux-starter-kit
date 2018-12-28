@@ -1,6 +1,6 @@
 <h1 align="center">
   <img src="logo.png"/><br>
-  React Native + React Native Navigation
+  React Native Navigation + Redux + Saga
 </h1>
 
 A starter boilerplate for a mobile app using React Native and React Native Navigation(v2). This boilerplate also provides a cool redux-saga structure to bootstrap your react-native app development.
