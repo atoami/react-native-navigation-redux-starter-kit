@@ -55,8 +55,14 @@ class WelcomeScreen extends PureComponent {
         </Text>
         <Button
           onPress={this.handleGetStartAction}
-          title={'Get Started'}
+          title={'Start Single Screen App'}
           buttonStyle={styles.button}
+          titleStyle={styles.buttonTitle}
+        />
+        <Button
+          onPress={this.handleGetStartAction}
+          title={'Start Tab Based App'}
+          buttonStyle={[styles.button, { backgroundColor: '#4AD7DB' }]}
           titleStyle={styles.buttonTitle}
         />
       </View>
