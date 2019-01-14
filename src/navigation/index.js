@@ -1,2 +1,2 @@
 export * from './Screens';
-export { pushTutorialScreen, pushSingleScreenApp } from './Navigation';
+export { pushTutorialScreen, pushSingleScreenApp, pushTabBasedApp } from './Navigation';

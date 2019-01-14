@@ -41,10 +41,13 @@ const styles = StyleSheet.create({
 
 class WelcomeScreen extends PureComponent {
 
-  handleGetStartAction = () => {
+  handleGetStartAction = (screenType) => {
     Navigation.push(this.props.componentId, {
       component: {
         name: LOGIN_SCREEN,
+        passProps: {
+          screenType
+        },
         options: {
           topBar: {
             title: {
@@ -67,13 +70,13 @@ class WelcomeScreen extends PureComponent {
           {'Welcome to RNN v2 Starter Kit!'}
         </Text>
         <Button
-          onPress={this.handleGetStartAction}
+          onPress={() => this.handleGetStartAction('Single')}
           title={'Start Single Screen App'}
           buttonStyle={styles.button}
           titleStyle={styles.buttonTitle}
         />
         <Button
-          onPress={this.handleGetStartAction}
+          onPress={() => this.handleGetStartAction('Tab')}
           title={'Start Tab Based App'}
           buttonStyle={styles.button}
           titleStyle={styles.buttonTitle}

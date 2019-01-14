@@ -11,7 +11,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { LoginManager, AccessToken } from 'react-native-fbsdk';
 
 import { connectData } from 'AppRedux';
-import { pushSingleScreenApp } from 'AppNavigator';
+import { pushSingleScreenApp, pushTabBasedApp } from 'AppNavigator';
 
 const styles = StyleSheet.create({
   flex: {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 class LoginScreen extends PureComponent {
 
   loginWithFacebook = () => {
-    const { getFacebookUserData } = this.props;
+    const { getFacebookUserData, screenType } = this.props;
 
     LoginManager
       .logInWithReadPermissions(['public_profile', 'email'])
@@ -40,7 +40,11 @@ class LoginScreen extends PureComponent {
       .then((data) => {
         if (data.accessToken) {
           getFacebookUserData({ facebookToken: data.accessToken });
-          pushSingleScreenApp();
+          if (screenType === 'Single') {
+            pushSingleScreenApp();
+          } else {
+            pushTabBasedApp();
+          }
         } else {
           Alert.alert('ReactNativeStarterKit', 'Failed to get facebook access token.');
         }
@@ -65,7 +69,8 @@ class LoginScreen extends PureComponent {
 }
 
 LoginScreen.propTypes = {
-  getFacebookUserData: PropTypes.func.isRequired
+  getFacebookUserData: PropTypes.func.isRequired,
+  screenType: PropTypes.oneOf(['Single', 'Tab']).isRequired
 };
 
 export default connectData()(LoginScreen);
