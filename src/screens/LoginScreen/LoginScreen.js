@@ -5,43 +5,65 @@ import PropTypes from 'prop-types';
 import {
   StyleSheet,
   View,
-  Text,
-  TouchableOpacity
+  Alert
 } from 'react-native';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { LoginManager, AccessToken } from 'react-native-fbsdk';
+
 import { connectData } from 'AppRedux';
-import { apiConfig } from 'AppConfig';
-import { pushDashboard } from 'AppNavigator';
 
 const styles = StyleSheet.create({
   flex: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  button: {
+    backgroundColor: '#039893'
   }
 });
 
 class LoginScreen extends PureComponent {
 
-  componentDidMount() {
-    const { fetchData } = this.props;
+  loginWithFacebook = () => {
+    const { getFacebookUserData } = this.props;
 
-    // call redux action
-    fetchData({ url: apiConfig.api_endpoint, method: 'GET', params: null });
-  }
+    LoginManager
+      .logInWithReadPermissions(['public_profile', 'email'])
+      .then((result) => {
+        if (result.isCancelled) {
+          return Promise.reject('Facebook login cancelled.');
+        }
+        return AccessToken.getCurrentAccessToken();
+      })
+      .then((data) => {
+        if (data.accessToken) {
+          getFacebookUserData({ facebookToken: data.accessToken });
+        } else {
+          Alert.alert('ReactNativeStarterKit', 'Failed to get facebook access token.');
+        }
+      })
+      .catch(() => Alert.alert('ReactNativeStarterKit', 'Something went wrong.'));
+  };
 
   render() {
     return (
       <View style={styles.flex}>
-        <TouchableOpacity onPress={() => pushDashboard()}>
-          <Text>Click here!</Text>
-        </TouchableOpacity>
+        <FontAwesome5.Button
+          solid
+          name={'facebook'}
+          style={styles.button}
+          onPress={this.loginWithFacebook}
+        >
+          Login with Facebook
+        </FontAwesome5.Button>
       </View>
     );
   }
 }
 
 LoginScreen.propTypes = {
-  fetchData: PropTypes.func.isRequired
+  getFacebookUserData: PropTypes.func.isRequired
 };
 
 export default connectData()(LoginScreen);

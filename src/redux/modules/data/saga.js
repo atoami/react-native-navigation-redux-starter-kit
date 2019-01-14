@@ -11,34 +11,37 @@ import {
 } from 'redux-saga/effects';
 
 import {
-  FETCH_DATA,
+  GET_FACEBOOK_DATA,
   fetchDataActionCreators
 } from './actions';
 
-export function* asyncFetchData({ payload }) {
+export function* asyncGetFacebookUserData({ payload }) {
 
-  const { url, method, params } = payload;
+  const { facebookToken } = payload;
+
+  // eslint-disable-next-line
+  const url = `https://graph.facebook.com/v2.11/me?access_token=${facebookToken}&fields=id,name,email,picture{url}`;
 
   try {
-    const response = yield call(App_Service, { url, method, params });
+    const response = yield call(App_Service, { url, method: 'GET' });
 
     if (response.result === 'ok') {
-      yield put(fetchDataActionCreators.fetchDataSuccess(response.data));
+      yield put(fetchDataActionCreators.getFacebookUserDataSuccess(response.data));
     }
   } catch (e) {
     console.log(e);
   }
 }
 
-export function* watchFetchData() {
+export function* watchGetFacebookUserData() {
   while (true) {
-    const action = yield take(FETCH_DATA);
-    yield* asyncFetchData(action);
+    const action = yield take(GET_FACEBOOK_DATA);
+    yield* asyncGetFacebookUserData(action);
   }
 }
 
 export default function* () {
   yield all([
-    fork(watchFetchData)
+    fork(watchGetFacebookUserData),
   ]);
 }

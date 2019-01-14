@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ReactNativeStarterKit</string>
+    <string name="facebook_app_id">2429596703782219</string>
+    <string name="fb_login_protocol_scheme">fb2429596703782219</string>
 </resources>

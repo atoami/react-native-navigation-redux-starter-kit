@@ -2,7 +2,7 @@
 
 import { Navigation } from 'react-native-navigation';
 
-import { WELCOME_SCREEN, DASHBOARD_SCREEN } from './Screens';
+import { WELCOME_SCREEN, SINGLE_APP_SCREEN } from './Screens';
 import registerScreens from './registerScreens';
 
 // Register all screens on launch
@@ -12,7 +12,7 @@ export function pushTutorialScreen() {
   Navigation.setDefaultOptions({
     topBar: {
       background: {
-        color: 'black'
+        color: '#039893'
       },
       title: {
         color: 'white',
@@ -24,7 +24,7 @@ export function pushTutorialScreen() {
       buttonColor: 'white',
     },
     statusBar: {
-      style: 'light'
+      style: 'dark'
     },
     layout: {
       orientation: ['portrait']
@@ -33,8 +33,17 @@ export function pushTutorialScreen() {
 
   Navigation.setRoot({
     root: {
-      component: {
-        name: WELCOME_SCREEN
+      stack: {
+        children: [{
+          component: {
+            name: WELCOME_SCREEN,
+            options: {
+              topBar: {
+                visible: false,
+              }
+            }
+          }
+        }]
       }
     }
   });
@@ -44,7 +53,7 @@ export function pushDashboard() {
   Navigation.setRoot({
     root: {
       component: {
-        name: DASHBOARD_SCREEN
+        name: SINGLE_APP_SCREEN
       }
     }
   });

@@ -1,17 +1,20 @@
 // @flow
 
 import {
-  FETCH_DATA_SUCCESS
+  GET_FACEBOOK_DATA_SUCCESS
 } from './actions';
 
 export const DEFAULT = {};
 
-export default function audios(state = DEFAULT, action = {}) {
+export default function data(state = DEFAULT, action = {}) {
   const { type, payload } = action;
 
   switch (type) {
-    case FETCH_DATA_SUCCESS: {
-      return payload;
+    case GET_FACEBOOK_DATA_SUCCESS: {
+      return {
+        ...state,
+        user: payload
+      };
     }
     default:
       return state;

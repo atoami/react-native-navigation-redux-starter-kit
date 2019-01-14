@@ -8,6 +8,8 @@ import {
   Image
 } from 'react-native';
 import { Button } from 'react-native-elements';
+import { Navigation } from 'react-native-navigation';
+import { LOGIN_SCREEN } from 'AppNavigator';
 
 const styles = StyleSheet.create({
   flex: {
@@ -40,7 +42,21 @@ const styles = StyleSheet.create({
 class WelcomeScreen extends PureComponent {
 
   handleGetStartAction = () => {
-
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: LOGIN_SCREEN,
+        options: {
+          topBar: {
+            title: {
+              text: 'LOGIN'
+            }
+          },
+          statusBar: {
+            style: 'light'
+          }
+        }
+      }
+    });
   };
 
   render() {
@@ -62,7 +78,7 @@ class WelcomeScreen extends PureComponent {
         <Button
           onPress={this.handleGetStartAction}
           title={'Start Tab Based App'}
-          buttonStyle={[styles.button, { backgroundColor: '#4AD7DB' }]}
+          buttonStyle={styles.button}
           titleStyle={styles.buttonTitle}
         />
       </View>

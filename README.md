@@ -10,6 +10,7 @@ Before start, make sure you installed:
 - [Android Studio](https://developer.android.com/studio/index.html) : Android Dev Environment
 - [Xcode](https://developer.apple.com/xcode/), [CocoaPods](https://cocoapods.org/) : iOS Dev Environment
 - [Node](https://nodejs.org) and [React Native CLI](http://facebook.github.io/react-native/docs/getting-started.html): React Native Dev Environment
+- [FBSDK](https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-current.zip): Download the SDK and unzip the archive to `~/Documents/FacebookSDK`.
 
 ## Stack
 - [React Native](https://facebook.github.io/react-native/): Development Environment
