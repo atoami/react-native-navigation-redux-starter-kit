@@ -24,7 +24,7 @@ export function pushTutorialScreen() {
       buttonColor: 'white',
     },
     statusBar: {
-      style: 'dark'
+      style: 'light'
     },
     layout: {
       orientation: ['portrait']
@@ -40,6 +40,9 @@ export function pushTutorialScreen() {
             options: {
               topBar: {
                 visible: false,
+              },
+              statusBar: {
+                style: 'dark'
               }
             }
           }
@@ -49,11 +52,36 @@ export function pushTutorialScreen() {
   });
 }
 
-export function pushDashboard() {
+export function pushSingleScreenApp() {
   Navigation.setRoot({
     root: {
-      component: {
-        name: SINGLE_APP_SCREEN
+      stack: {
+        children: [{
+          component: {
+            name: SINGLE_APP_SCREEN,
+            options: {
+              topBar: {
+                title: {
+                  text: 'SINGLE SCREEN APP'
+                },
+                leftButtons: [
+                  {
+                    id: 'nav_user_btn',
+                    icon: require('img/icons/ic_nav_user.png'),
+                    color: 'white'
+                  }
+                ],
+                rightButtons: [
+                  {
+                    id: 'nav_logout_btn',
+                    icon: require('img/icons/ic_nav_logout.png'),
+                    color: 'white'
+                  }
+                ]
+              }
+            }
+          }
+        }]
       }
     }
   });

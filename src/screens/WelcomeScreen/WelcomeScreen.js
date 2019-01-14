@@ -50,9 +50,6 @@ class WelcomeScreen extends PureComponent {
             title: {
               text: 'LOGIN'
             }
-          },
-          statusBar: {
-            style: 'light'
           }
         }
       }

@@ -11,6 +11,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { LoginManager, AccessToken } from 'react-native-fbsdk';
 
 import { connectData } from 'AppRedux';
+import { pushSingleScreenApp } from 'AppNavigator';
 
 const styles = StyleSheet.create({
   flex: {
@@ -39,6 +40,7 @@ class LoginScreen extends PureComponent {
       .then((data) => {
         if (data.accessToken) {
           getFacebookUserData({ facebookToken: data.accessToken });
+          pushSingleScreenApp();
         } else {
           Alert.alert('ReactNativeStarterKit', 'Failed to get facebook access token.');
         }

@@ -1,13 +1,18 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import {
   StyleSheet,
   View,
   Text,
-  TouchableOpacity
+  Alert
 } from 'react-native';
+import { Navigation } from 'react-native-navigation';
+import { get } from 'lodash';
+
 import { pushTutorialScreen } from 'AppNavigator';
+import { connectData } from 'AppRedux';
 
 const styles = StyleSheet.create({
   flex: {
@@ -22,18 +27,39 @@ class SingleAppScreen extends PureComponent {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    Navigation.events().bindComponent(this);
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    const { data } = this.props;
+
+    switch (buttonId) {
+      case 'nav_logout_btn': {
+        pushTutorialScreen();
+        break;
+      }
+      case 'nav_user_btn': {
+        Alert.alert(get(data, 'user.name', 'Unknown User'));
+        break;
+      }
+      default:
+        break;
+    }
   }
 
   render() {
     return (
       <View style={styles.flex}>
-        <TouchableOpacity onPress={() => pushTutorialScreen()}>
-          <Text>Click here to back to login page!</Text>
-        </TouchableOpacity>
+        <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
+          Play top buttons!
+        </Text>
       </View>
     );
   }
 }
 
-export default SingleAppScreen;
+SingleAppScreen.propTypes = {
+  data: PropTypes.shape({}).isRequired
+};
+
+export default connectData()(SingleAppScreen);
