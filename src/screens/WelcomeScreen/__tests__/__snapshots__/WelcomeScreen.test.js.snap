@@ -25,12 +25,20 @@ exports[`WelcomeScreen should render correctly 1`] = `
     }
   />
   <Text
+    allowFontScaling={false}
     style={
-      Object {
-        "fontSize": 16,
-        "fontWeight": "500",
-        "marginTop": 10,
-      }
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "SFProDisplay-Medium",
+          "fontSize": 12,
+        },
+        Object {
+          "fontSize": 16,
+          "fontWeight": "500",
+          "marginTop": 10,
+        },
+      ]
     }
   >
     Welcome to RNN v2 Starter Kit!
