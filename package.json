@@ -71,5 +71,10 @@
     "transform": {
       "^.+\\.js?$": "babel-jest"
     }
+  },
+  "rnpm": {
+    "assets": [
+      "src/fonts/assets"
+    ]
   }
 }

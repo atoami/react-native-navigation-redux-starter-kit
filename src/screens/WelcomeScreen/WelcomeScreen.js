@@ -9,7 +9,9 @@ import {
 } from 'react-native';
 import { Button } from 'react-native-elements';
 import { Navigation } from 'react-native-navigation';
+
 import { LOGIN_SCREEN } from 'AppNavigator';
+import { SFProDisplayMedium } from 'AppFonts';
 
 const styles = StyleSheet.create({
   flex: {
@@ -66,9 +68,9 @@ class WelcomeScreen extends PureComponent {
           style={styles.logo}
           source={require('img/images/logo.png')}
         />
-        <Text style={styles.logoTitle}>
+        <SFProDisplayMedium style={styles.logoTitle}>
           {'Welcome to RNN v2 Starter Kit!'}
-        </Text>
+        </SFProDisplayMedium>
         <Button
           onPress={() => this.handleGetStartAction('Single')}
           title={'Start Single Screen App'}

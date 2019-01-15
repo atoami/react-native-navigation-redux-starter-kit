@@ -90,6 +90,15 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>SFProDisplayBlack.otf</string>
+		<string>SFProDisplayBold.otf</string>
+		<string>SFProDisplayHeavy.otf</string>
+		<string>SFProDisplayLight.otf</string>
+		<string>SFProDisplayMedium.otf</string>
+		<string>SFProDisplayRegular.otf</string>
+		<string>SFProDisplaySemibold.otf</string>
+		<string>SFProDisplayThin.otf</string>
+		<string>SFProDisplayUltralight.otf</string>
 	</array>
 </dict>
 </plist>
