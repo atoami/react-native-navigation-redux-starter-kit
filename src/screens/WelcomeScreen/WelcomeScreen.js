@@ -4,14 +4,13 @@ import React, { PureComponent } from 'react';
 import {
   StyleSheet,
   View,
-  Text,
   Image
 } from 'react-native';
 import { Button } from 'react-native-elements';
 import { Navigation } from 'react-native-navigation';
 
-import { LOGIN_SCREEN } from 'AppNavigator';
-import { SFProDisplayMedium } from 'AppFonts';
+import { LOGIN_SCREEN } from 'src/navigation';
+import { SFProDisplayMedium } from 'src/fonts';
 
 const styles = StyleSheet.create({
   flex: {
@@ -66,7 +65,7 @@ class WelcomeScreen extends PureComponent {
       <View style={styles.flex}>
         <Image
           style={styles.logo}
-          source={require('img/images/logo.png')}
+          source={require('assets/images/logo.png')}
         />
         <SFProDisplayMedium style={styles.logoTitle}>
           {'Welcome to RNN v2 Starter Kit!'}

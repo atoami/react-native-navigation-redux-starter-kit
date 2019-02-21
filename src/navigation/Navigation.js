@@ -81,14 +81,14 @@ export function pushSingleScreenApp() {
                 leftButtons: [
                   {
                     id: 'nav_user_btn',
-                    icon: require('img/icons/ic_nav_user.png'),
+                    icon: require('assets/icons/ic_nav_user.png'),
                     color: 'white'
                   }
                 ],
                 rightButtons: [
                   {
                     id: 'nav_logout_btn',
-                    icon: require('img/icons/ic_nav_logout.png'),
+                    icon: require('assets/icons/ic_nav_logout.png'),
                     color: 'white'
                   }
                 ]
@@ -118,14 +118,14 @@ export function pushTabBasedApp() {
                     leftButtons: [
                       {
                         id: 'nav_user_btn',
-                        icon: require('img/icons/ic_nav_user.png'),
+                        icon: require('assets/icons/ic_nav_user.png'),
                         color: 'white'
                       }
                     ],
                     rightButtons: [
                       {
                         id: 'nav_logout_btn',
-                        icon: require('img/icons/ic_nav_logout.png'),
+                        icon: require('assets/icons/ic_nav_logout.png'),
                         color: 'white'
                       }
                     ]
@@ -135,7 +135,7 @@ export function pushTabBasedApp() {
             }],
             options: {
               bottomTab: {
-                icon: require('img/icons/ic_tab_home.png'),
+                icon: require('assets/icons/ic_tab_home.png'),
                 testID: 'FIRST_TAB_BAR_BUTTON',
                 text: 'Tab1',
               }
@@ -155,14 +155,14 @@ export function pushTabBasedApp() {
                     leftButtons: [
                       {
                         id: 'nav_user_btn',
-                        icon: require('img/icons/ic_nav_user.png'),
+                        icon: require('assets/icons/ic_nav_user.png'),
                         color: 'white'
                       }
                     ],
                     rightButtons: [
                       {
                         id: 'nav_logout_btn',
-                        icon: require('img/icons/ic_nav_logout.png'),
+                        icon: require('assets/icons/ic_nav_logout.png'),
                         color: 'white'
                       }
                     ]
@@ -172,7 +172,7 @@ export function pushTabBasedApp() {
             }],
             options: {
               bottomTab: {
-                icon: require('img/icons/ic_tab_menu.png'),
+                icon: require('assets/icons/ic_tab_menu.png'),
                 testID: 'SECOND_TAB_BAR_BUTTON',
                 text: 'Tab2',
               }

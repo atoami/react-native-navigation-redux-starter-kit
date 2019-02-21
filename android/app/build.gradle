@@ -1,4 +1,5 @@
 apply plugin: "com.android.application"
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 import com.android.build.OutputFile
 
@@ -101,7 +102,7 @@ android {
         applicationId "com.reactnativestarterkit"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative57"
+        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative57_5"
         versionCode 1
         versionName "1.0"
         ndk {
@@ -151,8 +152,9 @@ configurations.all {
 }
 
 dependencies {
-    compile project(':react-native-fbsdk')
-    compile project(':react-native-vector-icons')
+    implementation project(':react-native-config')
+    implementation project(':react-native-fbsdk')
+    implementation project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
@@ -166,17 +168,17 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into 'libs'
 }
 
-subprojects { subproject ->
-    afterEvaluate {
-        if ((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
-            android {
-                variantFilter { variant ->
-                    def names = variant.flavors*.name
-                    if (names.contains("reactNative51") || names.contains("reactNative55")) {
-                        setIgnore(true)
-                    }
-                }
-            }
-        }
-    }
-}
+//subprojects { subproject ->
+//    afterEvaluate {
+//        if ((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
+//            android {
+//                variantFilter { variant ->
+//                    def names = variant.flavors*.name
+//                    if (names.contains("reactNative51") || names.contains("reactNative55")) {
+//                        setIgnore(true)
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}

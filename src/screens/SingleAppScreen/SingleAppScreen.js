@@ -10,9 +10,10 @@ import {
 } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import { get } from 'lodash';
+import Config from 'react-native-config';
 
-import { pushTutorialScreen } from 'AppNavigator';
-import { connectData } from 'AppRedux';
+import { pushTutorialScreen } from 'src/navigation';
+import { connectData } from 'src/redux';
 
 const styles = StyleSheet.create({
   flex: {
@@ -51,7 +52,7 @@ class SingleAppScreen extends PureComponent {
     return (
       <View style={styles.flex}>
         <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
-          Play top buttons!
+          {Config.API_URL}
         </Text>
       </View>
     );

@@ -13,7 +13,7 @@ exports[`WelcomeScreen should render correctly 1`] = `
   <Image
     source={
       Object {
-        "testUri": "../../../src/img/images/logo.png",
+        "testUri": "../../../src/assets/images/logo.png",
       }
     }
     style={

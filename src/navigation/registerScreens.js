@@ -9,8 +9,8 @@ import {
   SingleAppScreen,
   Tab1Screen,
   Tab2Screen
-} from 'AppScreens';
-import { Provider } from 'AppRedux';
+} from 'src/screens';
+import { Provider } from 'src/redux';
 
 import {
   WELCOME_SCREEN,

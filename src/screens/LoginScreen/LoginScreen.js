@@ -10,8 +10,8 @@ import {
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { LoginManager, AccessToken } from 'react-native-fbsdk';
 
-import { connectData } from 'AppRedux';
-import { pushSingleScreenApp, pushTabBasedApp } from 'AppNavigator';
+import { connectData } from 'src/redux';
+import { pushSingleScreenApp, pushTabBasedApp } from 'src/navigation';
 
 const styles = StyleSheet.create({
   flex: {

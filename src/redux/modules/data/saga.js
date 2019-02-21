@@ -1,6 +1,6 @@
 // @flow
 
-import { App_Service } from 'AppServices';
+import { App_Service } from 'src/services';
 
 import {
   take,
