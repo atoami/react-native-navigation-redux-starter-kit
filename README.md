@@ -27,6 +27,7 @@ Before start, make sure you installed:
 - [React Native FBSDK](https://github.com/facebook/react-native-fbsdk): A React Native wrapper around the Facebook SDKs for Android and iOS
 - [React Native Elements](https://react-native-training.github.io/react-native-elements/): Cross Platform React Native UI Toolkit
 - [React Native Vector Icons](https://oblador.github.io/react-native-vector-icons/): Customizable Icons for React Native
+- [React Native Config](https://github.com/luggit/react-native-config): Config variables for React Native apps
 
 ## How to run?
 
