@@ -17,8 +17,8 @@ Before start, make sure you installed:
 - [FBSDK](https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-current.zip): Download the SDK and unzip the archive to `~/Documents/FacebookSDK`.
 
 ## Stack
-- [React Native](https://facebook.github.io/react-native/): Development Environment
-- [React Native Navigation(v2)](https://github.com/wix/react-native-navigation): Native based navigator for React Native
+- [React Native 0.58.5](https://facebook.github.io/react-native/): Development Environment
+- [React Native Navigation 2.12.0](https://github.com/wix/react-native-navigation): Native based navigator for React Native
 - [Redux](http://redux.js.org/): A predictable state container for JavaScript apps
 - [Redux-Saga](https://redux-saga.js.org/docs/api/): An alternative side effect model for Redux apps
 - [ESLint](https://eslint.org/): Pluggable linting utility for JavaScript
